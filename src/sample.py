@@ -1,11 +1,10 @@
 import os
 import sys
-import numpy as np
+import random as rd
 import tensorflow as tf
 import matplotlib.pyplot as plt 
 from absl import app
 from absl import flags
-import scipy.stats as stats
 
 physical_devices = tf.config.list_physical_devices('GPU')
 if len(physical_devices) > 0:
@@ -17,9 +16,8 @@ FLAGS = flags.FLAGS
 
 
 def sample(gan):
-    X = gan.gen.model.predict(stats.laplace.pdf(np.linspace(-32, 32, FLAGS.batch_size)))
-    X = X[0]
-    plt.imshow(X, cmap='gray')
+    X = gan.gen.model.predict([rd.random()])[0]
+    plt.imshow(X, cmap='gray', vmin=0, vmax=255)
     plt.show()
 
 
