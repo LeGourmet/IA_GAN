@@ -23,14 +23,14 @@ class DataManager:
             data.append(cv2.resize(img, (32, 32)))
 
         self.X = np.array(data)
+        self.X = np.reshape(self.X, (self.X.shape[0], 1024))
         self.set_size = len(images)
 
     def get_batch(self, batch_size, index=0):
         start = index * batch_size
         end = start + batch_size
-        size = end - start
 
-        return self.X[start:end], np.ones(size)
+        return self.X[start:end]
 
     def shuffle(self):
         indices = np.arange(self.set_size)

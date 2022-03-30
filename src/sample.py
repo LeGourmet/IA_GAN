@@ -1,6 +1,7 @@
 import os
 import sys
 import random as rd
+import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt 
 from absl import app
@@ -16,8 +17,9 @@ FLAGS = flags.FLAGS
 
 
 def sample(gan):
-    X = gan.gen.model.predict([rd.random()])[0]
-    plt.imshow(X, cmap='gray', vmin=0, vmax=255)
+    X = gan.gen.model.predict([rd.random()])
+    print("I found :", gan.disc.model.predict(X))
+    plt.imshow(np.reshape(X, (32, 32)), cmap='gray', vmin=0, vmax=255)
     plt.show()
 
 

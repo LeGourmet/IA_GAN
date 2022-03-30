@@ -1,6 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras import Input
-from tensorflow.keras.layers import Dense, Flatten, Reshape
+from tensorflow.keras.layers import Dense
 
 
 class Discriminator:
@@ -9,18 +8,8 @@ class Discriminator:
         self.make_discriminator()
         
     def make_discriminator(self):
-        '''
-        model.add(Conv2D(64, (3,3), padding='same', input_shape=in_shape))
-        model.add(Conv2D(128, (3,3), strides=(2,2), padding='same'))
-        model.add(Conv2D(128, (3,3), strides=(2,2), padding='same'))
-        model.add(Conv2D(256, (3,3), strides=(2,2), padding='same'))
-        puis fatten
-        '''
-
         self.model = tf.keras.Sequential()
-        self.model.add(Input(shape=(32, 32), name="discriminator_input"))
-        self.model.add(Dense(25, activation='elu'))
-        self.model.add(Flatten())
+        self.model.add(Dense(25, activation='elu', input_dim=1024, name="discriminator_input"))
         self.model.add(Dense(1, activation='sigmoid', name="discriminator_output"))
 
 
@@ -31,10 +20,8 @@ class Generator:
     
     def make_generator(self):
         self.model = tf.keras.Sequential()
-        self.model.add(Input(shape=1, name="generator_input"))
-        self.model.add(Dense(15, activation='elu'))
-        self.model.add(Dense(1024, activation='elu'))
-        self.model.add(Reshape((32, 32), name="generator_output"))
+        self.model.add(Dense(15, activation='elu', input_dim=1, name="generator_input"))
+        self.model.add(Dense(1024, activation='elu', name="generator_output"))
 
 
 class GAN:
