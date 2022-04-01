@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras.layers import Dense, Reshape, Flatten
+from tensorflow.keras.layers import Dense
 
 
 class Discriminator:
