@@ -2,117 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24493474-5a6c-4c02-b1dd-158ceef17d65" name="Default Changelist" comment="preeesque">
-      <change afterPath="$PROJECT_DIR$/src/laplaceGenerator/data_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/laplaceGenerator/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/laplaceGenerator/sample.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/laplaceGenerator/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TP3_GAN.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TP3_GAN.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000002.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000003.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000003.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000004.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000005.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000005.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000006.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000006.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000007.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000007.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000008.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000008.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000009.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000009.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000010.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000010.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000011.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000011.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000012.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000012.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000013.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000013.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000014.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000014.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000015.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000015.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000016.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000016.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000017.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000018.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000018.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000019.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000019.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000020.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000020.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000021.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000021.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000022.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000022.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000023.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000023.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000024.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000024.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000025.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000025.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000026.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000026.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000027.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000027.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000028.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000028.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000029.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000029.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000030.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000030.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000031.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000031.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000032.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000032.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000033.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000033.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000034.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000034.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000035.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000035.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000036.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000036.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000037.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000037.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000038.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000038.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000039.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000039.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000040.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000040.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000041.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000041.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000042.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000042.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000043.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000043.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000044.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000044.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000045.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000045.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000046.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000046.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000047.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000047.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000048.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000048.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000049.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000049.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000050.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000050.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000051.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000051.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000052.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000052.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000053.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000053.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000054.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000054.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000055.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000055.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000056.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000056.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000057.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000057.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000058.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000058.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000059.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000059.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000060.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000060.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000061.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000061.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000062.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000062.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000063.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000063.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000064.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000064.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000065.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000065.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000066.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000066.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000067.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000067.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000068.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000068.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000069.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000069.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000070.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000070.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000071.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000071.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000072.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000072.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000073.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000073.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000074.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000074.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000075.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000075.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000076.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000076.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000077.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000077.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000078.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000078.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000079.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000079.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000080.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000080.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000081.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000081.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000082.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000082.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000083.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000083.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000084.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000084.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000085.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000085.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000086.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000086.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000087.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000087.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000088.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000088.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000089.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000089.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000090.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000090.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000091.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000091.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000092.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000092.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000093.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000093.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000094.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000094.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000095.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000095.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000096.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000096.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000097.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000097.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000098.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000098.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000099.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000099.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/celeba/000100.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/celeba/000100.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/data_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/sample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageGenerator/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/laplaceGenerator/data_manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/laplaceGenerator/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/laplaceGenerator/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/laplaceGenerator/sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/laplaceGenerator/sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/laplaceGenerator/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/laplaceGenerator/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +49,7 @@
       <recent name="C:\Users\bowar\Desktop\TP3_GAN\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.train (1)">
     <configuration name="data_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TP3_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,6 +92,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP3_GAN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/laplaceGenerator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/laplaceGenerator/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP3_GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -221,6 +136,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train (1)" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.sample" />
         <item itemvalue="Python.data_manager" />
