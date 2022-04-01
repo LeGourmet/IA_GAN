@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Dense, Reshape, Flatten
 
 
 class Discriminator:
@@ -9,7 +9,10 @@ class Discriminator:
         
     def make_discriminator(self):
         self.model = tf.keras.Sequential()
-        self.model.add(Dense(25, activation='elu', input_dim=1024, name="discriminator_input"))
+        self.model.add(Dense(512, activation='elu', input_dim=1024, name="discriminator_input"))
+        self.model.add(Dense(256, activation='elu'))
+        self.model.add(Dense(64, activation='elu'))
+        self.model.add(Dense(32, activation='elu'))
         self.model.add(Dense(1, activation='sigmoid', name="discriminator_output"))
 
 
@@ -20,8 +23,11 @@ class Generator:
     
     def make_generator(self):
         self.model = tf.keras.Sequential()
-        self.model.add(Dense(15, activation='elu', input_dim=1, name="generator_input"))
-        self.model.add(Dense(1024, activation='elu', name="generator_output"))
+        self.model.add(Dense(32, activation='elu', input_dim=1, name="generator_input"))
+        self.model.add(Dense(64, activation='elu'))
+        self.model.add(Dense(256, activation='elu'))
+        self.model.add(Dense(512, activation='elu'))
+        self.model.add(Dense(1024, activation='relu', name="generator_output"))
 
 
 class GAN:
@@ -34,7 +40,6 @@ class GAN:
     def make_GAN(self, disc, gen):
         self.disc = disc
         self.gen = gen
-
         self.model = tf.keras.Sequential()
         self.model.add(self.gen.model)
         self.disc.model.trainable = False

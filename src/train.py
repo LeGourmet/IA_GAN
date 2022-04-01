@@ -21,7 +21,7 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import BinaryCrossentropy
 from tensorflow.keras.losses import MSE
 
-flags.DEFINE_integer("epochs", 100, "number of epochs")
+flags.DEFINE_integer("epochs", 20, "number of epochs")
 flags.DEFINE_integer("batch_size", 32, "batch size")
 flags.DEFINE_float("learning_rate", 0.05, "learning rate")
 flags.DEFINE_boolean("keep_training", True, "continue training same weights")
@@ -34,36 +34,41 @@ model_path = "./trained_model/"
 
 def train(gan):
     manager = DataManager(1000)
-    lossCurve = []
-    loss = None
+    totalLoss = []
+    loss = 0
+
+    bSize = FLAGS.batch_size
+    bSize2 = 2*FLAGS.batch_size
     nbBatches = manager.set_size // FLAGS.batch_size
-    ones = np.ones(FLAGS.batch_size)
-    zeros = np.zeros(FLAGS.batch_size)
+    ones = np.ones(bSize)
+    ones2 = np.ones(bSize2)
+    zeros = np.zeros(bSize)
 
     for epoch in range(1,FLAGS.epochs+1):
         print('Epoch', epoch, '/', FLAGS.epochs)
         manager.shuffle()
 
         for i in tqdm(range(nbBatches)):
-            z1 = np.random.randint(manager.set_size, size=FLAGS.batch_size)
-            z2 = np.random.randint(manager.set_size, size=FLAGS.batch_size)
+            z1 = np.random.randint(manager.set_size, size=bSize)
+            z2 = np.random.randint(manager.set_size, size=bSize2)
 
             gan.disc.model.trainable = True
-            loss = gan.disc.model.train_on_batch(manager.get_batch(FLAGS.batch_size, i), ones)
-            loss = gan.disc.model.train_on_batch(gan.gen.model.predict(z1), zeros)
+            lossReal = gan.disc.model.train_on_batch(manager.get_batch(FLAGS.batch_size, i), ones)
+            lossFake = gan.disc.model.train_on_batch(gan.gen.model.predict(z1), zeros)
+            loss = (lossReal + (1-lossFake))/2
             gan.disc.model.trainable = False
 
-            loss = gan.model.train_on_batch(z2, ones)
+            gan.model.train_on_batch(z2, ones2)
 
-        lossCurve.append(loss)
+        totalLoss.append(loss)
         #save_model("disc_model.h5", gan.disc.model, l)
         #save_model("gen_model.h5", gan.gen.model, l)
-        print("Epoch {} - loss: {}".format(epoch, lossCurve[epoch-1]))
+        print("Epoch {} - loss: {}".format(epoch, loss))
     print("Finished training.")
 
     sample(gan)
 
-    plt.plot(lossCurve)
+    plt.plot(totalLoss)
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.show()
@@ -85,7 +90,7 @@ def load_discriminator():
         print("Loading model from", model_path + "disc_model.h5")
         model_disc.model.load_weights(model_path)
 
-    model_disc.model.compile(loss=MSE, optimizer=Adam(FLAGS.learning_rate))
+    model_disc.model.compile(loss=BinaryCrossentropy(), optimizer=Adam(FLAGS.learning_rate))
     model_disc.model.summary()
     return model_disc
 
@@ -103,11 +108,9 @@ def load_generator():
 
 def main(argv):
     disc = load_discriminator()
-
     gen = load_generator()
-
     gan = GAN(disc, gen)
-    gan.model.compile(loss=MSE, optimizer=Adam(FLAGS.learning_rate))
+    gan.model.compile(loss=BinaryCrossentropy(), optimizer=Adam(FLAGS.learning_rate))
     gan.model.summary()
     train(gan)
 

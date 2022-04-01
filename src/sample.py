@@ -19,7 +19,8 @@ FLAGS = flags.FLAGS
 def sample(gan):
     X = gan.gen.model.predict([rd.random()])
     print("I found :", gan.disc.model.predict(X))
-    plt.imshow(np.reshape(X, (32, 32)), cmap='gray', vmin=0, vmax=255)
+    #X = 1/np.random.randint(1000, size=1024)
+    plt.imshow(np.reshape(X, (32, 32)), cmap='gray')
     plt.show()
 
 
