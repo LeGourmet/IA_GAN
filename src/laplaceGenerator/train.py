@@ -1,33 +1,33 @@
 import os
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+#os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 # os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 import tensorflow as tf
 
+'''
 physical_devices = tf.config.list_physical_devices('GPU')
 if len(physical_devices) > 0:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
-
+'''
 from absl import app
 from absl import flags
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stats
-from model import *
-from sample import sample
+from laplaceGenerator.model import *
+from laplaceGenerator.sample import sample
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import BinaryCrossentropy
 
-flags.DEFINE_integer("epochs", 100, "number of epochs")
-flags.DEFINE_integer("batch_size", 32, "batch size")
+flags.DEFINE_integer("epochs", 1000, "number of epochs")
+flags.DEFINE_integer("batch_size", 50, "batch size")
 flags.DEFINE_float("learning_rate", 0.005, "learning rate")
 FLAGS = flags.FLAGS
 
 
 def train(gan):
     lossTab = []
-    loss = 0
 
     HBS = FLAGS.batch_size
     FBS = 2*FLAGS.batch_size
@@ -38,8 +38,8 @@ def train(gan):
     for epoch in range(1,FLAGS.epochs+1):
         print('Epoch', epoch, '/', FLAGS.epochs)
 
-        zH = np.random.normal(0, 5, HBS)
-        zF = np.random.normal(0, 5, FBS)
+        zH = get_noise(HBS)
+        zF = get_noise(FBS)
 
         gan.disc.model.trainable = True
         lossReal = gan.disc.model.train_on_batch(get_batch(HBS), resRealImage)
@@ -64,11 +64,11 @@ def train(gan):
 
 
 def get_batch(batch_size):
-    xs = np.random.normal(0, 5, batch_size)
-    res = stats.laplace.pdf(xs)
-    print(res)
-    print(res.shape, "voici ma shape")
-    return res  # concatene xs and res
+    return stats.laplace.cdf(get_noise(batch_size))
+
+
+def get_noise(batch_size, min=-10, max=10):
+    return np.random.uniform(min, max, size=batch_size)
 
 
 def load(path, model):

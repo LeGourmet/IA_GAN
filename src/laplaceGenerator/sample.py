@@ -1,9 +1,9 @@
 import os
-import random as rd
 import numpy as np
 import tensorflow as tf
+import scipy.stats as stats
 import matplotlib.pyplot as plt
-from model import *
+from laplaceGenerator.model import *
 from absl import app
 
 physical_devices = tf.config.list_physical_devices('GPU')
@@ -11,11 +11,13 @@ if len(physical_devices) > 0:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 
-def sample(gan, nbPoint=50):
-    # this with full points
-    '''X = gan.gen.model.predict([rd.random()])
-    plt.imshow(np.reshape(X, (32, 32)), cmap='gray', vmin=0, vmax=255)
-    plt.show()'''
+def sample(gan, nbsample=1000):
+    bins = np.linspace(-10, 10, 41)
+    lVal = np.random.uniform(-10, 10, size=nbsample)
+    pred = (np.histogram(gan.gen.model.predict(lVal), bins)[0])/nbsample # normalize vector
+    plt.bar(bins[:-1], pred, width=0.5)
+    plt.plot(bins,stats.laplace.pdf(bins),'r')
+    plt.show()
 
 
 def load(path, model):
