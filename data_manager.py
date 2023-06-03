@@ -12,14 +12,14 @@ class DataManager:
         self.load_data(size)
 
     def load_data(self, size):
-        images = os.listdir("./imageGenerator/big_celeba/")
+        images = os.listdir("./big_celeba/")
         random.shuffle(images)
         if size != -1:
             images = images[:size]
 
         data = []
         for i in tqdm(images):
-            img = cv2.cvtColor(cv2.imread("./imageGenerator/big_celeba/" + i), cv2.COLOR_BGR2GRAY)
+            img = cv2.cvtColor(cv2.imread("./big_celeba/" + i), cv2.COLOR_BGR2GRAY)
             data.append(cv2.resize(img, (32, 32)))
 
         self.X = np.array(data)
